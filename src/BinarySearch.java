@@ -3,6 +3,7 @@
  * Author: ye.liu
  * Date: 2018/5/10
  * Time: 23:21
+ * 二分
  */
 
 public class BinarySearch {
@@ -27,6 +28,5 @@ public class BinarySearch {
         }else {
             return middle;
         }
-
     }
 }
