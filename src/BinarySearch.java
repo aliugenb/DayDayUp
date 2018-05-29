@@ -9,7 +9,7 @@
 public class BinarySearch {
     public static void main(String[] args) {
         int[] a = {1,3,46,78,90,115,666,777,999};
-        int b = recursionBinarySearch(a,114,0,8);
+        int b = recursionBinarySearch(a,115,0,8);
         System.out.println(b);
     }
     public static int recursionBinarySearch(int[] arr,int key,int low,int high){
