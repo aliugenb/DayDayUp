@@ -9,23 +9,15 @@ package com.study.fourth;
  */
 public class IsoscelesTriangle {
     public static void main(String[] args) {
-        create(10);
-        double a = (double)9/2;
-        System.out.println(a);
-        System.out.println(Math.ceil(a));
-    }
-
-    public static void create(int highet) {
-        String[] arr = new String[2*highet-1];
-        for(int a=0;a<arr.length;a++){
-            arr[a]="";
-        }
-        for(int i=1;i<=highet;i++){
-            for(int j=highet-1;j>=0;j--){
-                arr[j]
+        int highet = 15;
+        for(int a=0; a<highet; a++) {
+            for(int b=highet; b>=0;b--){
+                if(b>a) {
+                    System.out.print(" ");
+                } else{
+                    System.out.print("* ");
+                }
             }
-            arr[highet]="*";
-
             System.out.println();
         }
     }
