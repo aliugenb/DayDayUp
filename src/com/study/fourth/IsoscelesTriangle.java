@@ -9,12 +9,12 @@ package com.study.fourth;
  */
 public class IsoscelesTriangle {
     public static void main(String[] args) {
-        int highet = 15;
-        for(int a=0; a<highet; a++) {
-            for(int b=highet; b>=0;b--){
-                if(b>a) {
+        int height = 15;
+        for (int a = 0; a < height; a++) {
+            for (int b = height; b >= 0; b--) {
+                if (b > a) {
                     System.out.print(" ");
-                } else{
+                } else {
                     System.out.print("* ");
                 }
             }

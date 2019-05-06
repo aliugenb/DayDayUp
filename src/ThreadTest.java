@@ -1,13 +1,13 @@
 class TestThread extends Thread {
     private String name;
 
-    TestThread(String name){
+    TestThread(String name) {
         this.name = name;
     }
 
     @Override
     public void run() {
-        for(int i=0;i<30;i++){
+        for (int i = 0; i < 30; i++) {
             System.out.println(name);
             try {
                 Thread.sleep(10000);
@@ -18,6 +18,7 @@ class TestThread extends Thread {
     }
 
 }
+
 public class ThreadTest {
     public static void main(String[] args) {
         new Thread(new TestThread("aa")).start();

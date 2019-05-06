@@ -16,7 +16,7 @@ public class Main {
         a.add("bb");
         a.add("cc");
 //        a.forEach(obj-> System.out.println(obj));
-        for(Iterator i = a.iterator();i.hasNext();){
+        for (Iterator i = a.iterator(); i.hasNext(); ) {
             System.out.println(i);
             a.remove(i);
         }
