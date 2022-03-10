@@ -14,18 +14,36 @@ package com.study.leetcode;
 
 public class LongestCommonPrefix {
     public static String commonPrefix(String[] strings) {
-        if (strings.length == 0 || strings.length == 1) {
-            return "";
+        String res = "";
+
+        if (strings.length == 0) {
+            return res;
         }
         int min = strings[0].length();
         for (String s : strings) {
             min = Math.min(min, s.length());
         }
-
+        System.out.println(min);
         for (int i = 0; i < min; i++) {
-            for (String s : strings) {
-                if (strings[min].charAt(i)==)
+            boolean flag = false;
+            for (int j = 0; j < strings.length; j++) {
+                if (strings[0].charAt(i) == strings[j].charAt(i)) {
+                    flag = true;
+                } else {
+                    flag = false;
+                    return res;
+                }
+            }
+            if (flag) {
+                res = res + strings[0].charAt(i);
             }
         }
+        return res;
+    }
+
+    public static void main(String[] args) {
+//        String[] s = {"abcdd", "abcccd", "abddddd"};
+        String[] s = {"cir","car"};
+        System.out.println(commonPrefix(s));
     }
 }
