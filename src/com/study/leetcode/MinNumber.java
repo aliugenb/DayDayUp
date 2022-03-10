@@ -9,8 +9,9 @@ public class MinNumber {
     public static String min(int[] nums) {
         String res = "";
         String[] strs = new String[nums.length];
-        for (int i = 0; i < nums.length; i++)
+        for (int i = 0; i < nums.length; i++) {
             strs[i] = String.valueOf(nums[i]);
+        }
         Arrays.sort(strs, (x, y) -> (x + y).compareTo(y + x));
 
         StringBuffer sb = new StringBuffer();
@@ -25,6 +26,5 @@ public class MinNumber {
     public static void main(String[] args) {
         int[] nums = {20, 1};
         min(nums);
-
     }
 }
