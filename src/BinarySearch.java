@@ -9,7 +9,7 @@
 public class BinarySearch {
     public static void main(String[] args) {
         int[] a = {1, 3, 46, 78, 90, 115, 666, 777, 999};
-        int b = recursionBinarySearch(a, 115, 0, 8);
+        int b = recursionBinarySearch(a, 115, 0, a.length - 1);
         System.out.println(b);
     }
 
@@ -18,8 +18,8 @@ public class BinarySearch {
         if (key < arr[low] || key > arr[high] || low > high) {
             return -1;
         }
-
-        int middle = (low + high) / 2;            //初始中间位置
+        //初始中间位置
+        int middle = (low + high) / 2;
         if (arr[middle] > key) {
             //比关键字大则关键字在左区域
             return recursionBinarySearch(arr, key, low, middle - 1);
