@@ -1,3 +1,6 @@
+import java.util.Date;
+import java.util.Timer;
+
 class TestThread extends Thread {
     private String name;
 
@@ -34,18 +37,15 @@ public class ThreadTest {
 //                }
 //            }
 //        }).start();
-//
-//        new Thread(new Runnable() {
-//            @Override
-//            public void run() {
-//                System.out.println("bb");
-//                try {
-//                    Thread.sleep(10000);
-//                } catch (InterruptedException e) {
-//                    e.printStackTrace();
-//                }
-//            }
-//        }).start();
+        new Thread(()->{
+            System.out.println(System.currentTimeMillis());
+            System.out.println("bb");
+        }).start();
+
+        new Thread(()->{
+            System.out.println(System.currentTimeMillis());
+            System.out.println("aa");
+        }).start();
     }
 
 }
