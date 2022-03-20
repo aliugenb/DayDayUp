@@ -1,13 +1,11 @@
 package com.study.leetcode;
 
+import java.util.HashSet;
+import java.util.Set;
+
 /*
 给定一个字符串 s ，请你找出其中不含有重复字符的 最长子串 的长度。
  */
-
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
 
 public class NoRepeatString {
     public static int lengthOfLongestSubstring(String s) {

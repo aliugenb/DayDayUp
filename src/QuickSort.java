@@ -7,7 +7,7 @@
  */
 
 public class QuickSort {
-    public static void sort(int[] a) {//驱动程序
+    public static void sort(int[] a) {
         sort(a, 0, a.length - 1);
     }
 
@@ -62,7 +62,8 @@ public class QuickSort {
     public static void main(String[] args) {
         int[] a = {3, 4, 1, 9, 3, 2, 1, 6, 8, 4, 7, 5};
         sort(a);
-        for (int i = 0; i < a.length; i++)
+        for (int i = 0; i < a.length; i++) {
             System.out.print(" " + a[i] + " ");
+        }
     }
 }
