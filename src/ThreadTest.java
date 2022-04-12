@@ -1,5 +1,7 @@
 import java.util.Date;
 import java.util.Timer;
+import java.util.concurrent.Callable;
+import java.util.concurrent.FutureTask;
 
 class TestThread extends Thread {
     private String name;
@@ -24,8 +26,8 @@ class TestThread extends Thread {
 
 public class ThreadTest {
     public static void main(String[] args) {
-        new Thread(new TestThread("aa")).start();
-        new Thread(new TestThread("bb")).start();
+//        new Thread(new TestThread("aa")).start();
+//        new Thread(new TestThread("bb")).start();
 //        new Thread(new Runnable() {
 //            @Override
 //            public void run() {
@@ -37,15 +39,24 @@ public class ThreadTest {
 //                }
 //            }
 //        }).start();
-        new Thread(()->{
-            System.out.println(System.currentTimeMillis());
-            System.out.println("bb");
-        }).start();
+//        new Thread(() -> {
+//            System.out.println(System.currentTimeMillis());
+//            System.out.println("bb");
+//        }).start();
+//
+//        new Thread(() -> {
+//            System.out.println(System.currentTimeMillis());
+//            System.out.println("aa");
+//        }).start();
 
-        new Thread(()->{
-            System.out.println(System.currentTimeMillis());
-            System.out.println("aa");
-        }).start();
+        FutureTask<Integer> futureTask = new FutureTask<Integer>((Callable<Integer>)()->{
+            int i = 0;
+            for (; i < 10; i++) {
+                System.out.println("i的值" + i);
+            }
+            return i;
+        });
+        new Thread(futureTask,"开始").start();
     }
 
 }
