@@ -1,3 +1,5 @@
+package com.study.thread;
+
 import java.util.Date;
 import java.util.Timer;
 import java.util.concurrent.Callable;
@@ -26,8 +28,8 @@ class TestThread extends Thread {
 
 public class ThreadTest {
     public static void main(String[] args) {
-//        new Thread(new TestThread("aa")).start();
-//        new Thread(new TestThread("bb")).start();
+//        new Thread(new com.study.thread.TestThread("aa")).start();
+//        new Thread(new com.study.thread.TestThread("bb")).start();
 //        new Thread(new Runnable() {
 //            @Override
 //            public void run() {
